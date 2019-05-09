@@ -23,18 +23,18 @@ $ npm run prod
 ```
 .
     ├── configs              # Configuration files 
-    │   ├── keys.js          # Load and stress tests
-    │   ├── passport.js      # End-to-end, integration tests (alternatively `e2e`)
-    ├── public               # Test files (alternatively `spec` or `tests`)
-    │   ├── materializ.css   # Load and stress tests
-    ├── routes               # Test files (alternatively `spec` or `tests`)
-    │   ├── auth.js          # Load and stress tests
-    │   ├── home.js          # End-to-end, integration tests (alternatively `e2e`)
-    ├── views                # Test files (alternatively `spec` or `tests`)
-    │   ├── dashboard.html   # Load and stress tests
-    │   ├── home.html        # End-to-end, integration tests (alternatively `e2e`)
+    │   ├── keys.js          
+    │   ├── passport.js      
+    ├── public               # FrontEnd Libraries
+    │   ├── materializ.css   # materializ lib
+    ├── routes               # Page routes
+    │   ├── auth.js          
+    │   ├── home.js          
+    ├── views                # Views
+    │   ├── dashboard.html   
+    │   ├── home.html       
     ├── index.js
-    ├── MS19802886.xml
+    ├── MS19802886.xml       # submission details
     ├── package.json
     └── README.md
 ```
