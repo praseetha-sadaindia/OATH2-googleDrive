@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{title}}</title>
+    <link href="/static/materializ.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-wrapper">
+            <ul id="nav-mobile" class="right">
+                <li>{{name}}</li>
+                <li><a href="/auth/logout">logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col s12">
+                    <ul class="collection">
+                        <li class="collection-item avatar">
+                            <img src="{{avatar}}" alt="avatar" class="circle">
+                            <span class="title">{{name}}</span>
+                            <p>googleid - (user id) {{googleid}}</p>
+                            <p>email - {{email}}</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col s12 m4 center">
+
+                    <div>
+                        {% if (file == "uploaded") %}
+                        <div class="light-blue lighten-1" style="padding: 2px 10px">
+                            <p>File successfully uploaded</p>
+                        </div>
+                        {% elif (file == "notuploaded") %}
+                        <div class="light-blue lighten-1" style="padding: 2px 10px">
+                            <p>File failed to upload please try again</p>
+                        </div>
+                        {% endif %}
+                    </div>
+
+
+                    <form action="/upload" method="post" enctype="multipart/form-data">
+                        <div class="file-field input-field">
+                            <div class="btn">
+                                <span>File</span>
+                                <input type="file" required name="file_upload">
+                            </div>
+                            <div class="file-path-wrapper">
+                                <input class="file-path validate" type="text">
+                            </div>
+                        </div>
+                        <button style="display: block; margin: 0 auto" class="btn waves-effect waves-light"
+                            type="submit">UPLOAD</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+</body>
+
+</html>
